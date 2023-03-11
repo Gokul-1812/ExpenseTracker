@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses";
+import React from "react";
 
 function App() {
   const expenses = [
@@ -24,10 +25,20 @@ function App() {
   ];
 
   return (
-    <div>
-      <h2>Expense Tracker</h2>
-      <Expenses items={expenses} />
-    </div>
+    // <div>
+    //   <h2>Expense Tracker</h2>
+    //   <Expenses items={expenses} />
+    // </div>
+
+    // Alternative way for writting JSX code using React library
+    // The JSX code written above will be converted to below code before compiling in browser
+
+    React.createElement(
+      "div",
+      {},
+      React.createElement("h2", {}, "Expense Tracker"),
+      React.createElement(Expenses, { items: expenses })
+    )
   );
 }
 
