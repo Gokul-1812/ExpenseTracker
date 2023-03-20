@@ -1,5 +1,6 @@
 import Expenses from "./components/Expenses";
 import React from "react";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expenses = [
@@ -33,10 +34,11 @@ function App() {
     // Alternative way for writting JSX code using React library
     // The JSX code written above will be converted to below code before compiling in browser
 
+
     React.createElement(
       "div",
       {},
-      React.createElement("h2", {}, "Expense Tracker"),
+      React.createElement(NewExpense, {},),
       React.createElement(Expenses, { items: expenses })
     )
   );
