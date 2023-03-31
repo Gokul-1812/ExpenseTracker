@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div>
-      <h2 style={divStyle}>Expense Tracker</h2>
+      <h1 style={divStyle}>Expense Tracker</h1>
       <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses items={expense} />
     </div>
